@@ -1,0 +1,24 @@
+{
+  "name": "statusrc",
+  "version": "0.0.1-dev",
+  "description": "light statuses replacement",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soldy/statusrc.git"
+  },
+  "keywords": [],
+  "author": "Soldy",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/Soldy/statusrc/issues"
+  },
+  "homepage": "https://github.com/Soldy/statusrc#readme",
+  "devDependencies": {
+    "interactiveConsole": "0.0.7-alpha0",
+    "nanoTest": "^0.9.9-beta9"
+  }
+}
