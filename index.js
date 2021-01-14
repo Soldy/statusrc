@@ -11,6 +11,14 @@ exports.statusrc=function(modeIn){
      * @public
      * @return {integer}
      */
+    this.ok = function(res){
+         return ok(res);
+    };
+    /*
+     * @param {object} res
+     * @public
+     * @return {integer}
+     */
     this.notExist = function(res){
          return notExist(res);
     };
@@ -136,9 +144,9 @@ exports.statusrc=function(modeIn){
      * @return {integer}
      */
     const codeFix = function(code){
-        code = code.toString();
         if(typeof codes[code] === 'undefined')
             code = '500';
+        code = code.toString();
         return code;
     };
     /*
@@ -167,6 +175,14 @@ exports.statusrc=function(modeIn){
         if(mode === 'api')
             return apiShortEnd(res, code);
         return apiShortEnd(res, code);
+    };
+    /*
+     * @param {object} res
+     * @private
+     * @return {integer}
+     */
+    const ok = function(res){
+        return shortEnd(res, 200);
     };
     /*
      * @param {object} res
