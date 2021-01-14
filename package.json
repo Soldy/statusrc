@@ -1,6 +1,6 @@
 {
   "name": "statusrc",
-  "version": "0.0.1-dev",
+  "version": "0.0.1-dev20210114",
   "description": "light statuses replacement",
   "main": "index.js",
   "scripts": {
