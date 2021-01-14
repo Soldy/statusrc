@@ -8,6 +8,30 @@
 exports.statusrc=function(modeIn){
     /*
      * @param {object} res
+     * @public
+     * @return {integer}
+     */
+    this.notExist = function(res){
+         return notExist(res);
+    };
+    /*
+     * @param {object} res
+     * @public
+     * @return {integer}
+     */
+    this.notAllowedMethod = function(res){
+         return notAllowedMethod(res);
+    };
+    /*
+     * @param {object} res
+     * @public
+     * @return {integer}
+     */
+    this.badRequest = function(res){
+        return badRequest(res);
+    };
+    /*
+     * @param {object} res
      * @param {integer} code
      * @param {object} message
      * @public
@@ -143,6 +167,30 @@ exports.statusrc=function(modeIn){
         if(mode === 'api')
             return apiShortEnd(res, code);
         return apiShortEnd(res, code);
+    };
+    /*
+     * @param {object} res
+     * @private
+     * @return {integer}
+     */
+    const notExist = function(res){
+        return shortEnd(res, 404);
+    };
+    /*
+     * @param {object} res
+     * @private
+     * @return {integer}
+     */
+    const notAllowedMethod = function(res){
+        return shortEnd(res, 405);
+    };
+    /*
+     * @param {object} res
+     * @private
+     * @return {integer}
+     */
+    const badRequest = function(res){
+        return shortEnd(res, 400);
     };
     /*
      * @param {object} res 
